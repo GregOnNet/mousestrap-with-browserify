@@ -1,0 +1,23 @@
+{
+  "name": "mousestrap-plugin-integration-with-browserify",
+  "version": "1.0.0",
+  "description": "Looks for a clean way to load mousetrap as typescript module with initialized plugins'",
+  "main": "index.html",
+  "dependencies": {
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp": "^3.9.0",
+    "browserify": "^11.0.1",
+    "gulp-typescript": "^2.8.1",
+    "mousetrap": "^1.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mousestrap"
+  ],
+  "author": "Gregor Woiwode <gregor.woiwode@gmail.com>",
+  "license": "ISC"
+}
