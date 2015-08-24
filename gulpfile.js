@@ -18,12 +18,9 @@ gulp.task('build-ts', function() {
                    .pipe(gulp.dest('./.build/'));
 });
 
-
 gulp.task('build-mousetrap', function() {
-    var tsResult = tsConfig.src()
-                           .pipe(ts(tsConfig));
 
-    return gulp.src(['./node_modules/mousetrap/mousetrap.js'])
+    return gulp.src('./node_modules/mousetrap/mousetrap.js')
                .pipe(browserify())
                .pipe(gulp.dest('./.build/'));
 });
