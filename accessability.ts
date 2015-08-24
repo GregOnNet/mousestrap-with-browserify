@@ -1,17 +1,13 @@
-/// <reference path="./typings/mousetrap/mousetrap"/>
-/// <reference path="./typings/mousetrap/mousetrap-global-bind"/>
+import Mousetrap = require('mousetrap');
 
-import mousetrap  = require('mousetrap');
-
-export class Accessability {
+class Accessability {
 
   Mousetrap(): MousetrapInstance {
-    var instance = new mousetrap(undefined);
-    console.log(instance);
-    var _globalCallbacks = {};
-    var _originalStopCallback = Mousetrap.prototype.stopCallback;
+    var moustrap = new Mousetrap(undefined);
 
-    instance.bindGlobal = function(keys, callback, action) {
+    var _globalCallbacks = {};
+
+    moustrap.bindGlobal = function(keys, callback, action) {
         var self = this;
         self.bind(keys, callback, action);
 
@@ -25,6 +21,8 @@ export class Accessability {
         _globalCallbacks[keys] = true;
     };
 
-    return instance;
+    return moustrap;
   }
 }
+
+export = Accessability;
