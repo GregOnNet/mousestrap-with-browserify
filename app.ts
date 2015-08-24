@@ -1,18 +1,14 @@
-import accessability = require('./accessability');
+import Accessability = require('./accessability');
 
-(function() {
-  'use strict';
+var access = new Accessability();
+var mousetrap = access.Mousetrap();
 
-  var access = new accessability.Accessability();
-  var mousetrap = access.Mousetrap();
-  
-  mousetrap.bind('command+shift+k', () => {
+mousetrap.bind('command+shift+k', () => {
 
-    alert('You pressed CMD+SHIFT+K');
-  });
+  alert('You pressed CMD+SHIFT+K');
+});
 
-  mousetrap.bindGlobal('ctrl+s', () => {
+mousetrap.bindGlobal('ctrl+s', () => {
 
-    alert('You pressed CTRL+s');
-  });
-}());
+  alert('You pressed CTRL+s');
+});
